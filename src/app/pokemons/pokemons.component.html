@@ -1,0 +1,4 @@
+Filter: <input type='text' [value]='filter' (input)='filter = $event.target.value'>
+<ul *ngFor="let pokemon of pokemons">
+  <li [hidden]='!pokemon.name.toUpperCase().includes(filter.toUpperCase())'><a routerLink="/pokemons/{{pokemon.number}}">{{pokemon.name}}</a></li>
+</ul>

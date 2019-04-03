@@ -1,0 +1,17 @@
+<h2>Details for Pokemon </h2>
+<table>
+  <tr>
+    <td>Pokemon Name</td>
+    <td>{{pokemonDetails.name}}</td>
+  </tr>
+  <tr>
+    <td>Pokemon Abilities</td>
+    <td>
+      <table>
+        <tr *ngFor="let curAbility of pokemonDetails.abilities">
+          <td>{{curAbility.ability.name}}</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
